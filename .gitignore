@@ -1,0 +1,19 @@
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Windows
+Thumbs.db
+desktop.ini
