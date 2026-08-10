@@ -45,9 +45,11 @@ This project staged itself at `F:\Downloads\unpacker\`. Double-click `install.ba
 
 ## Quick start (Python script)
 
+Requires [uv](https://docs.astral.sh/uv/).
+
 ```cmd
-pip install -r requirements.txt
-python unpacker.py --folder "F:\Downloads"
+uv sync
+uv run unpacker.py --folder "F:\Downloads"
 ```
 
 ## Building the standalone .exe

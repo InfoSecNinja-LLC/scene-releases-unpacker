@@ -2,13 +2,12 @@
 REM ---------------------------------------------------------------
 REM Build a standalone unpacker.exe with PyInstaller.
 REM Run this once on the Windows box where you want to use the tool.
-REM Requires Python 3.10+ on PATH.
+REM Requires uv (https://docs.astral.sh/uv/) on PATH.
 REM ---------------------------------------------------------------
 setlocal
 
 echo === Installing/upgrading dependencies ===
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt pyinstaller
+uv sync
 if errorlevel 1 (
     echo Failed to install dependencies.
     exit /b 1
@@ -16,7 +15,7 @@ if errorlevel 1 (
 
 echo.
 echo === Building unpacker.exe ===
-python -m PyInstaller ^
+uv run pyinstaller ^
     --onefile ^
     --console ^
     --name unpacker ^
