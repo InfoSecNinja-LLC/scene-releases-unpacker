@@ -1,0 +1,18 @@
+[project]
+name = "unpacker"
+version = "0.1.0"
+description = "Scene Release Unpacker - watches a folder and auto-extracts scene releases"
+requires-python = ">=3.10"
+dependencies = [
+    "watchdog>=4.0.0",
+    "rarfile>=4.2",
+    "send2trash>=1.8.3",
+]
+
+[dependency-groups]
+dev = [
+    "pyinstaller",
+]
+
+[tool.uv]
+package = false
